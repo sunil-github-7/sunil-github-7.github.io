@@ -1,0 +1,57 @@
+---
+title: "Plotly"
+author: "Sunil"
+date: "October 2, 2019"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Simple plotly example - Student's Sleep  dataset
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Introduction
+
+- This is as part of Week 3 of Coure 9 under Data science Specialisation
+- Goal is to create a web page  presentation and feature an interactive plot that appears to have been created with Plotly
+- Chosen the Student's Sleep dataset for this presentation.
+
+## Slide with R Output
+
+```{r sleep, echo = TRUE}
+summary(sleep)
+```
+
+## Slide with Plot
+
+```{r plot ,include=FALSE}
+library(plotly)
+
+f <- list(
+  family = "Arial",
+  size = 20,   color = "Blue" )
+x <- list(
+  title = "Group - Drug given ",   titlefont = f )
+y <- list(
+  title = "Increase in hours of sleep",   titlefont = f )
+```
+
+```{r plotly,warning=FALSE}
+plot_ly(sleep, x = sleep$group, y=sleep$extra, type="box", showlegend=TRUE, 
+     color=as.factor(sleep$group))%>%   
+        layout(xaxis=x, yaxis=y)
+
+
+```
+
+## Interpretation
+ - At a glance , we can see that the commercial airlines took off post worldwar.
+ 
+ 
