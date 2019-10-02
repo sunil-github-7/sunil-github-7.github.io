@@ -1,0 +1,22 @@
+---
+title: "Leaflet"
+author: "Sunil"
+date: "October 2, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+## Edinburgh Waverley station
+### This is the only station to be named after poem in UK. I entered Edinburgh through the train station and the city has been dear to me. Wish to work there sometime in the future.
+
+```{r}
+library(leaflet)
+MyMap=leaflet()
+MyMap=addTiles(MyMap)
+MyMap=addMarkers(MyMap,lat=55.952,lng=-3.19,popup="Edinburgh Waverley")
+MyMap
+```
