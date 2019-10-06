@@ -1,0 +1,38 @@
+---
+title: "Course Project: Shiny Application and Reproducible Pitch"
+author: "Sunil"
+date: "October 6, 2019"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Course Objective
+- The  obejctive of this project is to write a Shiny application.
+- This is part of Week 4 of course 9 of the Data Science Specialisation.
+
+## SHINY Application
+
+- European Union moved to single currency on December 31, 1998
+- Our application will look at conversion of few currencies to Euro
+
+## Input fo the Shiny
+
+```{r }
+print("UI.R")
+knitr::include_graphics("D:\\DS\\09 - Shiny\\Shiny-UI.png")
+print("Server.R")
+knitr::include_graphics("D:\\DS\\09 - Shiny\\Shiny-server.png")
+```
+
+
+## Output of the Shiny
+
+```{r }
+knitr::include_graphics("D:\\DS\\09 - Shiny\\Shiny-Input.png")
+
+print("Thank you")
+
+```
